@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 declare module "rn-range-slider" {
   export type SliderProps = {
-     ...ViewPropTypes,
     min: PropTypes.number.isRequired,
     max: PropTypes.number.isRequired,
     minRange: PropTypes.number,
