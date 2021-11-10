@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { StyleProp, ViewStyle } from "react-native";
 import PropTypes from 'prop-types';
 
 declare module "rn-range-slider" {
@@ -9,6 +8,7 @@ declare module "rn-range-slider" {
     minRange: PropTypes.number,
     step: PropTypes.number.isRequired,
     renderThumb: PropTypes.func.isRequired,
+    renderThumbHigh: PropTypes.func.isRequired,
     low: PropTypes.number,
     high: PropTypes.number,
     allowLabelOverflow: PropTypes.bool,
