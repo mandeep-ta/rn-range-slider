@@ -1,31 +1,27 @@
 import { Component } from "react";
-import PropTypes from 'prop-types';
 
 declare module "rn-range-slider" {
   export type SliderProps = {
-    min: PropTypes.number.isRequired,
-    max: PropTypes.number.isRequired,
-    minRange: PropTypes.number,
-    step: PropTypes.number.isRequired,
-    renderThumb: PropTypes.func.isRequired,
-    renderThumbHigh: PropTypes.func.isRequired,
-    low: PropTypes.number,
-    high: PropTypes.number,
-    allowLabelOverflow: PropTypes.bool,
-    disableRange: PropTypes.bool,
-    disabled: PropTypes.bool,
-    floatingLabel: PropTypes.bool,
-    renderLabel: PropTypes.func,
-    renderNotch: PropTypes.func,
-    renderRail: PropTypes.func.isRequired,
-    renderRailSelected: PropTypes.func.isRequired,
-    onValueChanged: PropTypes.func,
-    onTouchStart: PropTypes.func,
-    onTouchEnd: PropTypes.func,
+    min: number,
+    max: number,
+    minRange?: number,
+    step: number,
+    renderThumb: () => void,
+    renderThumbHigh: () => void,
+    low?: number,
+    high?: number,
+    allowLabelOverflow?: boolean,
+    disableRange?: boolean,
+    disabled?: boolean,
+    floatingLabel?: boolean,
+    renderLabel?: () => void,
+    renderNotch?: () => void,
+    renderRail: () => void,
+    renderRailSelected: () => void,
+    onValueChanged?: (low: number, high: number) => void,
+    onTouchStart?: () => void,
+    onTouchEnd?: () => void,
   };
 
-  export default class RangeSlider extends Component<SliderProps> {
-   // open(): void;
-   // close(): void;
-  }
+  export default class RangeSlider extends Component<SliderProps> {}
 }
